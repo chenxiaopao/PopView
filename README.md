@@ -12,27 +12,30 @@
         , arrowPoint: CGPoint(x:110,y:100),arrowSize:CGSize(width:10,height:20), titleNames:titleNames , imageNames: imageNames)
     firstPopView.delegate = self
     view.addSubview(firstPopView)
-
-遵守代理
-extension ViewController:PopViewDelegate{
-    func popView(_ popViewCellBtn: UIButton, popTag: Int) {
-    //通过添加的项由Button.tag区分，从0开始，
-        let index = popViewCellBtn.tag
-        switch index{
-        case 0:
-            print(titleNames[index])
-            break
-        case 1:
-            print(titleNames[index])
-            break
-        case 2:
-            print(titleNames[index])
-            break
-        case 3:
-            print(titleNames[index])
-            break
-        default:
-            break
+    
+    遵守代理方法
+    extension ViewController:PopViewDelegate{
+        func popView(_ popViewCellBtn: UIButton, popTag: Int) {
+        //通过添加的项由Button.tag区分，从0开始，
+            let index = popViewCellBtn.tag
+            switch index{
+            case 0:
+                print(titleNames[index])
+                break
+            case 1:
+                print(titleNames[index])
+                break
+            case 2:
+                print(titleNames[index])
+                break
+            case 3:
+                print(titleNames[index])
+                break
+            default:
+                break
+            }
         }
     }
-}
+
+
+
